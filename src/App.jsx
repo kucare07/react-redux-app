@@ -8,8 +8,7 @@ import store from './store/Store'
 //compornents
 import Header from './compornents/Header/Header.jsx'
 import Home from './compornents/Home/Home'
-
-
+import MovieDetail from './compornents/MovieDetail/MovieDetail'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +21,7 @@ function App() {
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/movie/:id" element={<MovieDetail />} />
             </Routes>
           </div>
         </Router>
