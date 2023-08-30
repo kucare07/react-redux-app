@@ -9,6 +9,7 @@ import store from './store/Store'
 import Header from './compornents/Header/Header.jsx'
 import Home from './compornents/Home/Home'
 import MovieDetail from './compornents/MovieDetail/MovieDetail'
+import Footer from './compornents/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
               <Route path="/movie/:id" element={<MovieDetail />} />
             </Routes>
           </div>
+          <Footer />
         </Router>
       </Provider>
     </div>

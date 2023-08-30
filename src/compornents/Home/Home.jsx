@@ -5,11 +5,14 @@ import { useDispatch } from 'react-redux'
 import { addMovie } from '../../store/Reducer'
 
 import MovieListing from '../MovieListing/MovieListing'
+import './Home.scss'
 
 function Home() {
 
     const dispatch = useDispatch();
     const [search, setSearch] = useState("");
+    console.log(search);
+
 
     useEffect(() => {
         const fetchMovies =async () => {
@@ -23,12 +26,12 @@ function Home() {
         }
 
         fetchMovies();
-    }, []);
+    }, [search]);
 
   return (
     <div>
         <h3 style={{margin: "1rem 0"}}>Movies</h3>
-        <input type="text" placeholder='Search...' />
+        <input type="text" placeholder='Search...' value={search} onChange={(e) => setSearch(e.target.value)} />
         <MovieListing />
     </div>
   )
