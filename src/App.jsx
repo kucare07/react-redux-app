@@ -10,6 +10,7 @@ import Header from './compornents/Header/Header.jsx'
 import Home from './compornents/Home/Home'
 import MovieDetail from './compornents/MovieDetail/MovieDetail'
 import Footer from './compornents/Footer/Footer'
+import PageNotFound from './compornents/PageNotFound/PageNotFound'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,8 +22,9 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/movie/:id" element={<MovieDetail />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/movie/:idss' element={<MovieDetail />} />
+              <Route path='/*' element={<PageNotFound />} />
             </Routes>
           </div>
           <Footer />
