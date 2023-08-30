@@ -8,8 +8,8 @@ const movieSlice = createSlice({
     name: "movieListing",
     initialState,
     reducers: {
-        addMovie: (State, action) => {
-            state.movie = action.payload
+        addMovie: (state, action) => {
+            state.movies = action.payload
             console.log(current(state));
         }
     }
